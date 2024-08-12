@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Audio Object</title>
+	<style>
+		h1 {
+			color: green;
+		}
+		
+		h2 {
+			font-family: Impact;
+		}
+		
+		body {
+			text-align: center;
+		}
+	</style> 
+</head>
+
+<body>
+	<h1>GeeksforGeeks</h1>
+	<h2>Audio Object</h2>
+
+	<audio id="track" controls>
+		<source src="bells.ogg"
+				type="audio/ogg">
+		<source src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230705130625/RZFWLXE-bell-hop-bell.mp3"
+				type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+
+	<p>Double-click the "Access Audio" button
+	to get the duration of the audio, in seconds.</p>
+
+	<button onclick="access()">Access Audio</button>
+	<p id="test"></p>
+	<script>
+		function access() {
+			// Accessing audio element duration.
+			let m = document.getElementById(
+			"track").duration;
+			document.getElementById("test").innerHTML = m;
+		}
+	</script>
+
+</body>
+
+</html>
